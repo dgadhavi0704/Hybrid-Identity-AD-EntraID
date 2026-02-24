@@ -5,3 +5,10 @@ This project demonstrates the implementation and troubleshooting of a hybrid ide
 The environment was built to simulate real-world enterprise identity operations, including scoped synchronization, user lifecycle control, authentication validation, and controlled rollout strategies using OU and group-based filtering.
 During implementation, multiple infrastructure issues were intentionally and unintentionally encountered and resolved, including DNS forwarder misconfiguration, Hyper-V time synchronization conflicts, NTP hierarchy correction, certificate validation failure (AADSTS700027), and synchronization filtering misalignment.
 The project validates an understanding of how on-premises identity integrates with cloud identity platforms and demonstrates hands-on troubleshooting across networking, time services, authentication, and synchronization components.
+
+## Repository Structure
+
+- 02_Architecture.md → Environment design and identity flow
+- 03_Implementation_Steps.md → Installation and configuration steps
+- 04_Troubleshooting_Log.md → Real-world issues encountered and resolved
+- 05_Validation_And_Testing.md → Verification of synchronization and authentication
