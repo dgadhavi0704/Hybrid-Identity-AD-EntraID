@@ -4,34 +4,51 @@
 
 # Architecture Overview
 
-## Environment Components
 
-- 1 × Windows Server 2022 Domain Controller (AD DS, DNS)
-- 1 × Windows Server 2022 Member Server (Microsoft Entra Connect)
-- Microsoft Entra ID Tenant (rationabeing3346.onmicrosoft.com)
-- 1 × Windows 10 Pro Client VM (DC, Hyper-V)
-- 1 × Windows 10 Pro Client VM (On Personal Laptop for direct Entra ID Cloud-Users)
+## Environment Summary (Hybrid Identity Lab)
 
-## Identity Model
+This lab simulates a common enterprise hybrid identity deployment where on-premises Active Directory remains the authoritative identity source and Microsoft Entra ID is used for cloud authentication.
 
-- On-premises AD DS is the authoritative identity source.
-- Microsoft Entra Connect configured for:
-  - Password Hash Synchronization (PHS)
-  - Scoped synchronization using OU and security group filtering
+### On-Premises (Hyper-V Host: BEASTDC)
+- **Windows Server 2022 Domain Controller**
+  - Roles: AD DS, DNS
+  - Domain: `YKT.dhruv`
+- **Windows Server 2022 Member Server VM**
+  - Microsoft Entra Connect (Sync) installed
+- **Windows 10 VM (Test Client)**
+  - Domain-joined workstation used to validate authentication and name resolution
 
-## Synchronization Scope
+### Cloud
+- **Microsoft Entra ID Tenant**
+  - Primary domain: `rationalbeing3346outlook.onmicrosoft.com`
 
-- Dedicated OU: EntraSync-Users
-- Security Group: EntraSyncGrp (Global Security)
-- Only selected test users are included to simulate a controlled enterprise rollout.
+---
 
-## Authentication Flow
+## Synchronization + Authentication Model
 
-User logs in → AD authenticates → Password hash synced to Entra ID → Cloud authentication validated.
+### Synchronization
+- Microsoft Entra Connect configured with:
+  - **Password Hash Synchronization (PHS)**
+  - **Scoped sync** using **OU filtering + security group filtering**
+- Only selected users in the dedicated OU and security group are synchronized to Entra ID to simulate a staged rollout.
 
-## Key Infrastructure Dependencies
+### Authentication
+- **Seamless SSO enabled**
+- Domain-joined users access cloud resources (ex: Microsoft 365) without repeatedly entering credentials, relying on Kerberos-based SSO in the hybrid setup.
 
-- DNS forwarders configured on the Domain Controller
-- Correct NTP hierarchy
-- Hyper-V time synchronization on Member Server
-- Azure application certificate validation (resolved AADSTS700027)
+---
+
+## Key Dependencies
+- **DNS**
+  - Domain Controller DNS is authoritative for internal zone (`YKT.dhruv`)
+  - DNS forwarders used for external name resolution (Microsoft endpoints)
+- **Time**
+  - Correct time hierarchy is required for Kerberos and certificate-based authentication
+  - Time skew caused AAD connector authentication failures (documented in Troubleshooting Log)
+
+---
+
+## Diagram
+Add diagram here after exporting from draw.io:
+
+![Hybrid Identity Architecture](assets/Hybrid-Identity-Architecture.png)
