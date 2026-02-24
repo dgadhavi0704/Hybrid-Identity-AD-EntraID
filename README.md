@@ -12,3 +12,13 @@ The project validates an understanding of how on-premises identity integrates wi
 - 03_Implementation_Steps.md → Installation and configuration steps
 - 04_Troubleshooting_Log.md → Real-world issues encountered and resolved
 - 05_Validation_And_Testing.md → Verification of synchronization and authentication
+
+## Skills Demonstrated
+
+- Hybrid identity architecture (AD DS + Microsoft Entra ID)
+- Microsoft Entra Connect configuration (PHS + Seamless SSO)
+- OU and group-based scoped synchronization
+- DNS troubleshooting and forwarder configuration
+- Time hierarchy and NTP troubleshooting
+- Certificate-based authentication debugging (AADSTS700027)
+- Sync engine validation and manual sync execution
