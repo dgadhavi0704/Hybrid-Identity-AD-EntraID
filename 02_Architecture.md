@@ -20,7 +20,7 @@ This lab simulates a common enterprise hybrid identity deployment where on-premi
 
 ### Cloud
 - **Microsoft Entra ID Tenant**
-  - Primary domain: `rationalbeing3346outlook.onmicrosoft.com`
+  - Primary domain: `rationalbeing33**outlook.onmicrosoft.com`
 
 ---
 
@@ -40,15 +40,14 @@ This lab simulates a common enterprise hybrid identity deployment where on-premi
 
 ## Key Dependencies
 - **DNS**
-  - Domain Controller DNS is authoritative for internal zone (`YKT.dhruv`)
+  - Domain Controller DNS is authoritative for the internal zone (`YKT.dhruv`)
   - DNS forwarders used for external name resolution (Microsoft endpoints)
 - **Time**
-  - Correct time hierarchy is required for Kerberos and certificate-based authentication
+  - A correct time hierarchy is required for Kerberos and certificate-based authentication
   - Time skew caused AAD connector authentication failures (documented in Troubleshooting Log)
 
 ---
 
 ## Diagram
-Add diagram here after exporting from draw.io:
 
 ![Hybrid Identity Architecture](Assets/Hybrid-Identity-Architecture.png)
