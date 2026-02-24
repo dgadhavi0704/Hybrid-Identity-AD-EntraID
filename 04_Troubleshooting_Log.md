@@ -2,14 +2,14 @@ Issue → Symptoms → Root cause → Fix → Verification
 
 * Issues:
 
-DNS using Shaw resolver / wrong DNS server
+1. DNS using Shaw resolver / wrong DNS server
 
-nslookup only worked when specifying DNS
+2. nslookup only worked when specifying the DNS
 
-DC time vs member server time mismatch
+3. DC time vs member server time mismatch
 
-Hyper-V time sync / timezone permissions
+4. Hyper-V time sync/timezone permissions
 
-AADSTS700027 cert/key expired error
+5. AADSTS700027 cert/key expired error
 
-“sync already running” / no logs appearing
+6. “sync already running” / no logs appearing
