@@ -51,4 +51,4 @@ This lab simulates a common enterprise hybrid identity deployment where on-premi
 ## Diagram
 Add diagram here after exporting from draw.io:
 
-![Hybrid Identity Architecture](assets/Hybrid-Identity-Architecture.png)
+![Hybrid Identity Architecture](Assets/Hybrid-Identity-Architecture.png)
