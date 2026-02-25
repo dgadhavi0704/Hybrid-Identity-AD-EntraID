@@ -50,4 +50,4 @@ This lab simulates a common enterprise hybrid identity deployment where on-premi
 
 ## Diagram
 
-![Hybrid Identity Architecture](Assets/Hybrid-Identity-Architecture.png)
+![Hybrid Identity Architecture]
