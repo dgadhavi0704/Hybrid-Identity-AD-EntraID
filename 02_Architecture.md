@@ -45,6 +45,9 @@ This lab simulates a common enterprise hybrid identity deployment where on-premi
 - **Time**
   - A correct time hierarchy is required for Kerberos and certificate-based authentication
   - Time skew caused AAD connector authentication failures (documented in Troubleshooting Log)
+ 
+  ## Diagram
+ ![Assets/Hybrid-Identity-Architecture](Assets/Hybrid-Identity-Architecture.png)
 
 ---
 
