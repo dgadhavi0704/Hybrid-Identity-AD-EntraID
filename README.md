@@ -94,3 +94,6 @@ See:
 - Certificate-based authentication debugging (AADSTS700027)
 - Sync engine diagnostics and manual synchronization execution
 - Cross-layer identity dependency analysis
+
+  ## Diagram
+ ![Assets/Hybrid-Identity-Architecture](Assets/Hybrid-Identity-Architecture.png)
